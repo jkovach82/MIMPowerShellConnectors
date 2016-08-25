@@ -15,7 +15,7 @@
 
 Set-PSDebug -Strict
 
-Import-Module (Join-Path -Path ([Microsoft.MetadirectoryServices.MAUtils]::MAFolder) -ChildPath 'xADSyncPSConnectorModule.psm1') -Verbose:$false
+Import-Module (Join-Path -Path [Microsoft.MetadirectoryServices.MAUtils]::MAFolder -ChildPath "xADSyncPSConnectorModule.psm1") -Verbose:$false
 
 $importResults = New-Object -TypeName 'Microsoft.MetadirectoryServices.GetImportEntriesResults'
 $csEntries = New-Object -TypeName 'System.Collections.Generic.List[Microsoft.MetadirectoryServices.CSEntryChange]'
